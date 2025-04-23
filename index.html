@@ -132,13 +132,20 @@ h2:after {
 /* ===== Header ===== */
 header {
     background-color: var(--white);
-    padding: 20px 0;
+    padding: 10px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, padding 0.3s ease, height 0.3s ease;
+    height: 80px; /* Initial height */
 }
 
+header.scrolled {
+    padding: 10px 0;
+    height: 80px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
 .header-container {
     display: flex;
     justify-content: space-between;
@@ -147,7 +154,6 @@ header {
     margin: 0 auto;
     padding: 0 20px;
 }
-
 .logo img {
     height: 60px;
     width: auto;
@@ -969,7 +975,7 @@ footer {
     <header>
         <div class="header-container">
             <div class="logo">
-                <a href="index.php"><img src="https://via.placeholder.com/180x60?text=Namelock+Bakery" alt="Namelock Bakery Logo"></a>
+                <a href="index.php"><img src="uploads/logo.png" alt="Namelock Bakery Logo"></a>
             </div>
             
             <div class="menu-toggle" id="mobile-menu">
@@ -1036,7 +1042,7 @@ footer {
                     <a href="about.php" class="btn btn-primary" style="margin-top: 20px;">Read Our Full Story</a>
                 </div>
                 <div class="about-img" data-animate="slide-in-left">
-                    <img src="https://images.unsplash.com/photo-1608190003443-86ab6a0a1e5b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1587&q=80" alt="Our Bakery">
+                    <img src="uploads/catering.webp" alt="Our Bakery">
                 </div>
             </div>
         </div>
@@ -1070,16 +1076,12 @@ footer {
                 </div>
                 
                 <div class="service-card" data-animate="slide-in-up" class="delay-2">
-                    <div class="service-img">
-                        <img src="https</h3>
-                        <p>Design your dream cake for any occasion. Birthdays, weddings, anniversaries - we bring your vision to life.</p>
-                        <a href="cakes.php" class="btn btn-secondary btn-small">Learn More</a>
-                    </div>
+                    
                 </div>
                 
                 <div class="service-card" data-animate="slide-in-up" class="delay-1">
                     <div class="service-img">
-                        <img src="https://images.unsplash.com/photo-1669151802118-69144551318d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Fresh Pastries">
+                        <img src="uploads/french.jpg" alt="Fresh Pastries">
                     </div>
                     <div class="service-content">
                         <h3>Fresh Pastries</h3>
@@ -1090,7 +1092,7 @@ footer {
                 
                 <div class="service-card" data-animate="slide-in-up" class="delay-2">
                     <div class="service-img">
-                        <img src="https://images.unsplash.com/photo-1556181501-5b403145e521?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Artisan Breads">
+                        <img src="uploads/bread.jpeg" alt="Artisan Breads">
                     </div>
                     <div class="service-content">
                         <h3>Artisan Breads</h3>
@@ -1101,7 +1103,7 @@ footer {
                 
                 <div class="service-card" data-animate="slide-in-up" class="delay-3">
                     <div class="service-img">
-                        <img src="https://images.unsplash.com/photo-1589157034848-6c81d3511999?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Baking Classes">
+                        <img src="uploads/class.jpeg" alt="Baking Classes">
                     </div>
                     <div class="service-content">
                         <h3>Baking Classes</h3>
@@ -1112,8 +1114,7 @@ footer {
                 
                 <div class="service-card" data-animate="slide-in-up" class="delay-4">
                     <div class="service-img">
-                        <img src="https://images.unsplash.com/photo-1600833821551-5959d3033302?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Dessert Catering">
-                    </div>
+                        <img src="uploads/desert.jpeg" alt="Dessert Catering"></div>
                     <div class="service-content">
                         <h3>Dessert Catering</h3>
                         <p>Let us cater your next event with our delicious cakes and desserts. Perfect for any celebration.</p>
@@ -1222,7 +1223,7 @@ footer {
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <img src="https://via.placeholder.com/180x60?text=Namelock+Bakery" alt="Namelock Bakery Logo">
+                    <img src="uploads/logo.png" alt="Namelock Bakery Logo">
                     <p>Your local artisan bakery in Kiambu, crafting delicious treats for every occasion.</p>
                 </div>
                 <div class="footer-links">
@@ -1255,7 +1256,7 @@ footer {
             </div>
         </div>
         <div class="copyright">
-            <p>&copy; 2025 Namelock Bakery. All rights reserved.</p>
+            <p>&copy; 2025 Namelok Bakery. All rights reserved.</p>
         </div>
     </footer>
 
@@ -1342,6 +1343,14 @@ footer {
                 }, 5000);
             });
         }
+        window.addEventListener('scroll', () => {
+    const header = document.querySelector('header');
+    if (window.scrollY > 50) { // Adjust the scroll threshold as needed
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
     </script>
 </body>
-  </html>
+    </html>
